@@ -1,6 +1,9 @@
 import random
 
 
+
+
+
 class Game:
     def __init__(self):
         self.__coin1 = ''
@@ -48,3 +51,22 @@ class Game:
         else:
             print("Sorry your guess was incorrect!")
 
+    def score(self):
+            """Keeps track of the player score if he wants to play again"""
+            highscore = 0;
+            if self.__outcome == self.__player_guess:
+                highscore = highscore + 1;
+                print("Your score is " + str(highscore))
+
+            else:
+                print("Your score is " + str(highscore))
+
+    def play(self):
+        playagain = "no";
+        while (playagain != "no"):
+            print("Do you want to play again")
+            playagain = input()
+            if (playagain == "no"):
+                break
+            else:
+                continue
