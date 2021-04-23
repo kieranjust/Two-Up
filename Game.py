@@ -45,7 +45,6 @@ class Game:
             if self.__outcome == 'TH':
                 self.__outcome = 'HT'
 
-<<<<<<< HEAD
 
             if self.__outcome == self.__player_guess:
                 print("Congratulations, you guessed correctly!")
@@ -60,9 +59,8 @@ class Game:
             else:
                 self.__amount_of_guesses = self.__amount_of_guesses + 1
                 print("You have guessed {0} out of {1} correctly".format(self.__correct_guesses, self.__amount_of_guesses))
-=======
+
         if self.__outcome == self.__player_guess:
             print("Congratulations, you guessed correctly!")
         else:
             print("Sorry your guess was incorrect!")
->>>>>>> b8542067db1aa22b3a9132894ba9980a1fad2236
