@@ -64,4 +64,3 @@ class Game:
                 print("Congratulations, you guessed correctly!")
             else:
                 print("Sorry your guess was incorrect!")
-
