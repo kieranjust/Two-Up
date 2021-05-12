@@ -6,6 +6,8 @@ class Game:
             self.__coin2 = ''
             self.__outcome = ''
             self.__player_guess = ''
+            self.__correct_guesses = 0
+            self.__amount_of_guesses = 0
 
         def make_guess(self):
             """Asks the player to guess what the coins will land on. Inputs can be 'HH' 'HT' or 'TT case insensitive"""
@@ -36,8 +38,6 @@ class Game:
                 return self.__coin2
 
         def check_guess(self):
-            self.__correct_guesses = 0
-            self.__amount_of_guesses = 0
 
             """Checks the player guess with the outcome of the coin flips and generates a message based on outcome"""
             self.__outcome = self.__coin1 + self.__coin2
@@ -51,6 +51,8 @@ class Game:
             else:
                 print("Sorry your guess was incorrect!")
 
+
+
             if self.__outcome == self.__player_guess:
                 self.__correct_guesses = self.__correct_guesses + 1;
                 self.__amount_of_guesses = self.__amount_of_guesses + 1
@@ -60,15 +62,3 @@ class Game:
                 self.__amount_of_guesses = self.__amount_of_guesses + 1
                 print("You have guessed {0} out of {1} correctly".format(self.__correct_guesses, self.__amount_of_guesses))
 
-            if self.__outcome == self.__player_guess:
-                print("Congratulations, you guessed correctly!")
-            else:
-                print("Sorry your guess was incorrect!")
-
-
-
-
-
-
-'''JUST IGNORE THIS'''
-'''create fake data just to provide screenshots for my resubmission'''
