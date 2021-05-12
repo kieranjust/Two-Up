@@ -6,8 +6,6 @@ class Game:
             self.__coin2 = ''
             self.__outcome = ''
             self.__player_guess = ''
-            self.__correct_guesses = 0
-            self.__amount_of_guesses = 0
 
         def make_guess(self):
             """Asks the player to guess what the coins will land on. Inputs can be 'HH' 'HT' or 'TT case insensitive"""
@@ -38,6 +36,8 @@ class Game:
                 return self.__coin2
 
         def check_guess(self):
+            self.__correct_guesses = 0
+            self.__amount_of_guesses = 0
 
             """Checks the player guess with the outcome of the coin flips and generates a message based on outcome"""
             self.__outcome = self.__coin1 + self.__coin2
