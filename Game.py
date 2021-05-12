@@ -44,23 +44,15 @@ class Game:
         """Checks the player guess with the outcome of the coin flips and generates a message based on outcome"""
         self.__outcome = self.__coin1 + self.__coin2
         "This removes the chance of TH equalling an incorrect guess if HT is guessed"
+        self.__amount_of_guesses += 1
         if self.__outcome == 'TH':
             self.__outcome = 'HT'
 
-
-            if self.__outcome == self.__player_guess:
-                print("Congratulations, you guessed correctly!")
-            else:
-                print("Sorry your guess was incorrect!")
-
-
-
-            if self.__outcome == self.__player_guess:
-                self.__correct_guesses = self.__correct_guesses + 1;
-                self.__amount_of_guesses = self.__amount_of_guesses + 1
-                print("You have guessed {0} out of {1} correctly".format(self.__correct_guesses, self.__amount_of_guesses))
-
-            else:
-                self.__amount_of_guesses = self.__amount_of_guesses + 1
-                print("You have guessed {0} out of {1} correctly".format(self.__correct_guesses, self.__amount_of_guesses))
+        if self.__outcome == self.__player_guess:
+            self.__correct_guesses += 1
+            return "You have guessed {0} out of {1} correctly".format(self.__correct_guesses,
+                                                                      self.__amount_of_guesses)
+        else:
+            return "You have guessed {0} out of {1} correctly".format(self.__correct_guesses,
+                                                                      self.__amount_of_guesses)
 
