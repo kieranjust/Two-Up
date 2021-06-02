@@ -7,6 +7,8 @@ class Game:
         self.__coin2 = ''
         self.__outcome = ''
         self.__player_guess = ''
+        self.__correct_guesses = 0
+        self.__amount_of_guesses = 0
 
     def make_guess_heads_heads(self):
         """Sets the players guess to heads, heads"""
@@ -42,10 +44,15 @@ class Game:
         """Checks the player guess with the outcome of the coin flips and generates a message based on outcome"""
         self.__outcome = self.__coin1 + self.__coin2
         "This removes the chance of TH equalling an incorrect guess if HT is guessed"
+        self.__amount_of_guesses += 1
         if self.__outcome == 'TH':
             self.__outcome = 'HT'
 
         if self.__outcome == self.__player_guess:
-            return"Congratulations, you guessed correctly!"
+            self.__correct_guesses += 1
+            return "You have guessed {0} out of {1} correctly".format(self.__correct_guesses,
+                                                                      self.__amount_of_guesses)
         else:
-            return"Sorry your guess was incorrect!"
+            return "You have guessed {0} out of {1} correctly".format(self.__correct_guesses,
+                                                                      self.__amount_of_guesses)
+

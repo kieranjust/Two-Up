@@ -53,15 +53,9 @@ class TwoUp(EasyFrame):
         self.game.make_guess_tails_tails()
 
     def check_guess_handler(self):
-        self.main_function()
         self.outputField1.setText(self.game.flip_coin_1())
         self.outputField2.setText(self.game.flip_coin_2())
         self.outputField3.setText(self.game.check_guess())
-
-    def main_function(self):
-        self.game.flip_coin_1()
-        self.game.flip_coin_2()
-        self.game.check_guess()
 
 
 twoUp = TwoUp().mainloop()
