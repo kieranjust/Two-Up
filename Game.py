@@ -50,9 +50,9 @@ class Game:
 
         if self.__outcome == self.__player_guess:
             self.__correct_guesses += 1
-            return "You have guessed {0} out of {1} correctly".format(self.__correct_guesses,
+            return "{0} out of {1}!".format(self.__correct_guesses,
                                                                       self.__amount_of_guesses)
         else:
-            return "You have guessed {0} out of {1} correctly".format(self.__correct_guesses,
+            return "{0} out of {1}!".format(self.__correct_guesses,
                                                                       self.__amount_of_guesses)
 
